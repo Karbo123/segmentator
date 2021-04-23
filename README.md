@@ -1,4 +1,4 @@
-# A simple lib for 3d segmentation
+# A simple cpp lib for 3d unsupervised segmentation
 
 It implements both pointcloud segmentation (using graph) and mesh segmentation.
 
