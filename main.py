@@ -34,23 +34,3 @@ def segment_point(vertices, normals, edges, kThresh=0.01, segMinVerts=20):
     index = torch.unique(index, return_inverse=True)[1]
     return index
 
-
-
-if __name__ == "__main__":
-    import trimesh
-    import numpy as np
-    from .utils import compute_vn
-
-    mesh = trimesh.load_mesh("/data/lab-lei.jiabao/ScanNet_Source/scene0001_00/scene0001_00_vh_clean_2.ply")
-
-    vertices = torch.from_numpy(mesh.vertices.astype(np.float32))
-    faces = torch.from_numpy(mesh.faces.astype(np.int64))
-    ind = segment_mesh(vertices, faces) 
-    color_table = torch.randint(0, 256, size=(1 + ind.max(), 3))
-    np.savetxt("result_pc_mesh.txt", torch.cat([vertices, color_table[ind]], dim=1).numpy())
-
-    normals = torch.from_numpy(compute_vn(mesh).astype(np.float32))
-    edges = torch.from_numpy(mesh.edges.astype(np.int64))
-    ind = segment_point(vertices, normals, edges) 
-    np.savetxt("result_pc_point.txt", torch.cat([vertices, color_table[ind]], dim=1).numpy())
-

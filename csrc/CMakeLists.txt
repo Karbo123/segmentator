@@ -19,3 +19,14 @@ target_compile_definitions(libsegmentator PUBLIC TORCH_API_INCLUDE_EXTENSION_H)
 target_compile_definitions(libsegmentator PUBLIC ${TORCH_CXX_FLAGS})
 target_include_directories(libsegmentator PUBLIC ${TORCH_INCLUDE_DIRS})
 target_include_directories(libsegmentator PUBLIC ${PYTHON_INCLUDE_DIRS})
+
+
+# to install
+set(BARE_PROJECT_NAME segmentator)
+install(CODE "execute_process(                                        \
+    COMMAND ${CMAKE_COMMAND} -E create_symlink                        \
+    ${PROJECT_SOURCE_DIR}/../../${BARE_PROJECT_NAME}                  \
+    ${CMAKE_INSTALL_PREFIX}/${BARE_PROJECT_NAME}                      \
+    )"
+)
+
