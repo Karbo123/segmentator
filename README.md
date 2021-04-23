@@ -1,6 +1,6 @@
 # A simple cpp lib for 3d unsupervised segmentation
 
-It implements both pointcloud segmentation (using graph) and mesh segmentation.
+It implements both pointcloud segmentation (using graph) and mesh segmentation, and provides a simple pytorch-binding interface to operate functions.
 
 Codes are adapted from: https://github.com/ScanNet/ScanNet/tree/master/Segmentator
 
