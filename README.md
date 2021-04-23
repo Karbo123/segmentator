@@ -1,6 +1,8 @@
-# A simple lib for mesh segmentation
+# A simple lib for 3d segmentation
 
-Adapted from: https://github.com/ScanNet/ScanNet/tree/master/Segmentator
+It implements both pointcloud segmentation (using graph) and mesh segmentation.
+
+Codes are adapted from: https://github.com/ScanNet/ScanNet/tree/master/Segmentator
 
 Build example:
 ```bash
