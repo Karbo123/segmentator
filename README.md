@@ -6,7 +6,7 @@ Codes are adapted from: https://github.com/ScanNet/ScanNet/tree/master/Segmentat
 
 Build example:
 ```bash
-cd Segmentator && mkdir build && cd build
+cd csrc && mkdir build && cd build
 
 cmake .. \
 -DCMAKE_PREFIX_PATH=`python -c 'import torch;print(torch.utils.cmake_prefix_path)'` \
