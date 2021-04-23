@@ -9,7 +9,7 @@ find_package(Torch REQUIRED)
 find_package(PythonLibs REQUIRED)
 find_library(TORCH_PYTHON_LIBRARY torch_python PATHS "${TORCH_INSTALL_PREFIX}/lib")
 
-set(SOURCES_LIB segmentator_binding.cpp)
+set(SOURCES_LIB segmentator.cpp)
 add_library(libsegmentator SHARED ${SOURCES_LIB})
 set_target_properties(libsegmentator PROPERTIES POSITION_INDEPENDENT_CODE ON)
 set_target_properties(libsegmentator PROPERTIES PREFIX "")
