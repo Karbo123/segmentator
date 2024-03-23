@@ -1,5 +1,5 @@
 import torch
-from .csrc.build.libsegmentator import segment_mesh as segment_mesh_fn, segment_point as segment_point_fn
+from libsegmentator._C import segment_mesh as segment_mesh_fn, segment_point as segment_point_fn
 
 
 def segment_mesh(vertices, faces, kThresh=0.01, segMinVerts=20):
