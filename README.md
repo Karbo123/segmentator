@@ -18,6 +18,7 @@ make && make install # after install, please do not delete this folder (as we on
 ```
 
 Some Helpful Notes:
+- If you cannot compile and have some issues with cuDNN, try additionally passing `-DCAFFE2_USE_CUDNN=0` to cmake
 - Our code is expected to be run with `g++` and has not been tested on `MSVC`
 - If you cannot compile the code, please ensure your compilation setup is correct
 
